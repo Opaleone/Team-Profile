@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/Opaleone/Team-Profile#readme",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^8.2.4",
+    "inquirer-loop": "^0.3.0"
   },
   "devDependencies": {
     "jest": "^29.2.1"

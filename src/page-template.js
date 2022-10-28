@@ -25,8 +25,6 @@ function generateHtml(data) {
 }
 
 function generateEmployeeCards(data) {
-  
-  
   for (let i = 0; i < data.newEmployee.length; i++) {
     if (data.newEmployee[i].employeeChoice === 'Manager') {
       return generateNewManager(data);

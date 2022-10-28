@@ -32,7 +32,6 @@ const questions = [
         type: 'list',
         message: 'What type of employee would you like to add?',
         choices: [
-          'Manager',
           'Engineer',
           'Intern'
         ],
@@ -52,12 +51,6 @@ const questions = [
         type: 'input',
         message: 'What is this employee\'s email?',
         name: 'employeeEmail'
-      },
-      {
-        type: 'input',
-        message: 'What is the manager\'s office number?',
-        when: (answers) => answers.employeeChoice === 'Manager',
-        name: 'anotherManager'
       },
       {
         type: 'input',

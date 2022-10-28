@@ -26,9 +26,7 @@ function generateHtml(data) {
 
 function generateEmployeeCards(data) {
   for (let i = 0; i < data.newEmployee.length; i++) {
-    if (data.newEmployee[i].employeeChoice === 'Manager') {
-      return generateNewManager(data);
-    } else if (data.newEmployee[i].employeeChoice === 'Engineer') {
+    if (data.newEmployee[i].employeeChoice === 'Engineer') {
       return generateEngineer(data);
     } else if (data.newEmployee[i].employeeChoice === 'Intern') {
       return generateIntern(data);
@@ -50,21 +48,6 @@ function generateInitialCard(data) {
   </ul>
 
   <a href=mailto:"${data.managerEmail}" class="card-link custom-email">${data.managerEmail}</a>
-</div>`
-}
-
-function generateNewManager(data) {
-  return `<div class="card col-12 col-md-4 col-lg-4 custom-card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">${data.newEmployee[0].employeeName}</h5>
-    <p class="card-text">${data.newEmployee[0].employeeChoice}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">ID: ${data.newEmployee[0].employeeId}</li>
-    <li class="list-group-item">Office Number: ${data.newEmployee[0].managerOfficeNumber}</li>
-  </ul>
-
-  <a href=mailto:"${data.newEmployee[0].employeeEmail}" class="card-link custom-email">${data.newEmployee[0].employeeEmail}</a>
 </div>`
 }
 
